@@ -10,22 +10,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="CSS/styleSheet.css" />
+    <script src="JS/mainMenu.js" defer></script>
     <title>Bim Bam Boom</title>
   </head>
   <body>
     <div id="logo">
-      <img id="logo_img" src="IMGS/logo.webp" alt="logo" />
       <h1 id="logo_text">Bim Bam Boom</h1>
     </div>
     <div id="games">
       <div id="gamemode1">
         <h2 class="game_title">Standaard Modus</h2>
         <p id="letter">random letter</p>
-        <button>Start</button>
+        <div id="button_container">
+          <button id="new_letter_button" class="buttons">Nieuwe Letter</button
+          ><button class="buttons">Start</button>
+        </div>
       </div>
       <div id="gamemode2">
         <h2 class="game_title">Bim Bam Boom Modus</h2>
-        <button>Start</button>
+        <button class="buttons">Start</button>
       </div>
     </div>
   </body>
