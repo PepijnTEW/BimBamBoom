@@ -12,10 +12,15 @@ const questions = [
 ];
 
 const seed = async () => {
-    await Question.deleteMany({});
-    await Question.insertMany(questions);
-    console.log("Seeded questions");
-    mongoose.connection.close();
+    try {
+        await Question.deleteMany({});
+        await Question.insertMany(questions);
+        console.log("Seeded questions");
+    } catch(err) {
+        console.log(err);
+    } finally {
+        mongoose.connection.close();
+    }
 }
 
 seed();
