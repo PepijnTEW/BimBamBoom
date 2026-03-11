@@ -21,5 +21,8 @@ app.get('/', (req, res) => {
 const questionRouter = require('./routes/question');
 app.use('/questions', questionRouter);
 
+const powerupRouter = require('./routes/powerup');
+app.use('/powerups', powerupRouter);
+
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server draait op poort ${PORT}`));
