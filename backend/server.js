@@ -22,4 +22,4 @@ const powerupRouter = require('./routes/powerup');
 app.use('/powerups', powerupRouter);
 
 const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server draait op poort ${PORT}`));
+app.listen(PORT, () => console.log(`Server runs on port: ${PORT}`));
