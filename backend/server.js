@@ -17,5 +17,9 @@ app.get('/', (req, res) => {
     res.send('Welcome to the BimBamBoom Api');
 });
 
+//Routes from folder ./routes
+const questionRouter = require('./routes/question');
+app.use('/questions', questionRouter);
+
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server draait op poort ${PORT}`));
