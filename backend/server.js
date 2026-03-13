@@ -18,10 +18,10 @@ app.get('/', (req, res) => {
 
 //Routes from folder ./routes
 const questionRouter = require('./routes/question');
-app.use('/questions', questionRouter);
+app.use('/', questionRouter);
 
 const powerupRouter = require('./routes/powerup');
-app.use('/powerups', powerupRouter);
+app.use('/', powerupRouter);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server runs on port: ${PORT}`));
