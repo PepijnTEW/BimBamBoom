@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 //Routes from folder ./routes
 const questionRouter = require('./routes/question');
-app.use('/', questionRouter);
+app.use('/questions', questionRouter);
 
 const powerupRouter = require('./routes/powerup');
 app.use('/', powerupRouter);
