@@ -17,14 +17,13 @@ const powerups = [
 ];
 
 const seed = async () => {
-
     try {
         await Powerup.deleteMany({});
         await Powerup.insertMany(powerups);
         console.log("Seeded powerups");
     } catch(err) {
         console.log(err);;
-    } finally{
+    } finally {
         mongoose.connection.close();
     }
 }
